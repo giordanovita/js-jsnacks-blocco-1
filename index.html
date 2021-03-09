@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgreen;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        div{
+            font-size: 30px;
+            margin: 30px;
+        }
+
+        #maintext{
+            color:green;
+        }
+
+        #main{
+             color:red;
+        }
+    </style>
+</head>
+<body>
+   <div id="maintext">pari</div>
+
+   <div id="main">dispari</div>
+    
+
+    <script>
+ 
+//------------------------------------------------------------------------------------
+        // Generatore di "nomi cognomi" casuali: prendendo una 
+        // lista di nomi e una lista di cognomi, Gatsby vuole 
+        // generare una falsa lista di invitati.
+        /* var names = ['Michele', 'Fabio', 'Roberto'];
+        var lastnames = ['Forghieri', 'Papagni', 'Marazzini'];  
+
+        var nomi = names.length;
+        var cognomi = lastnames.length;
+
+        var rndValue = [];
+
+        for (i=0; i<8; i++){
+            
+            var rndNomi =names[ Math.floor(Math.random() * nomi)];
+            var rndCognomi =lastnames [Math.floor(Math.random() * cognomi)];
+
+            rndValue.push(rndNomi + ' ' + rndCognomi)
+      
+        }
+        
+        console.log(rndValue) */
+        
+//------------------------------------------------------------------------------------
+
+        // Crea due array che hanno un numero di elementi diversi. 
+        // Aggiungi elementi all'array che ha meno elementi fino a 
+        // quando ne avrà tanti quanti l'altro.
+       /*  var arr1 = [ 15, 2, 7, 45, 101, 67, 18 ];
+        var arr2 = [ 5 ];
+
+        var arr1Lng = arr1.length;
+        var arr2Lng = arr2.length;
+
+        if (arr1Lng > arr2Lng){
+            var longer = arr1;
+            var shorter = arr2;
+            var diff = arr1Lng - arr2Lng;
+
+            for(i=0; i< diff; i++){
+                var rndNumb = Math.floor(Math.random()*100);
+                arr2.push(rndNumb);
+            }
+        }else if(arr2Lng > arr1Lng){
+            var longer = arr2;
+            var shorter = arr1;
+            var diff = arr2Lng - arr1Lng;
+
+            for(i=0; i< diff; i++){
+                var rndNumb = Math.floor(Math.random()*100);
+                arr1.push(rndNumb);
+            }
+        }else{
+            console.log('i due array hanno lo stesso numero di caratteri')
+        }
+
+        console.log(arr1,arr2); */
+
+//------------------------------------------------------------------------------------
+
+        // Chiedere all'utente un valore limite, poi richiedere all'utente una serie di valori
+        // finche' la somma non supera il valore limite e stampare i valori forniti dall'utente
+
+     /*    var askedFirstValue = parseInt(prompt( 'dimmi un numero:'));
+        var value = [];
+        var sum = 0;
+        var tooMuch = 'limite raggiunto o superato';
+
+      
+        while(askedFirstValue > sum) {
+        var askedSecondValue = parseInt(prompt( 'raggiungi il numero precedente:'));
+        value.push(askedSecondValue);
+        sum += value;
+        console.log(value, askedFirstValue)
+
+    }   
+      
+      console.log(tooMuch)
+ */
+     // ---------------------------------------
+
+    // Crea due tag div con due id diversi. 
+        // Un div avrà il testo colorato di rosso mentre l'altro di verde. 
+        // Partendo da un array di numeri, stampiamo nell'id rosso i numeri 
+        // dispari e in verde i numeri pari.
+        
+        
+        var numbers = [15, 20, 1, 3, 22];
+        var printPair = document.getElementById('maintext');
+        var printOdd = document.getElementById('main');
+
+        for(i=0; i<numbers.length; i++){
+            if(numbers[i] % 2 == 0){
+            printPair.innerHTML += ' ' + numbers[i]
+        }
+            else{ printOdd.innerHTML += ' ' + numbers[i]
+            }
+        }
+           
+    </script>
+</body>
+
+
+</html>
