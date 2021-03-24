@@ -121,7 +121,7 @@
         // dispari e in verde i numeri pari.
         
         
-        var numbers = [15, 20, 1, 3, 22];
+/*         var numbers = [15, 20, 1, 3, 22];
         var printPair = document.getElementById('maintext');
         var printOdd = document.getElementById('main');
 
@@ -132,7 +132,112 @@
             else{ printOdd.innerHTML += ' ' + numbers[i]
             }
         }
-           
+ */    
+
+      // ---------------------------------------
+// esercizi assegnati il 24/03
+
+/* - Creare un oggetto che descriva uno studente con le
+seguenti proprietà: nome, cognome e età. Stampare a
+schermo attraverso il for in tutte le proprietà.
+- Creare un array di oggetti di studenti. Ciclare su tutti gli
+studenti e stampare per ognuno nome e cognome
+- Dare la possibilità all'utente attraverso 3 prompt di
+aggiungere un nuovo oggetto studente inserendo
+nell'ordine: nome, cognome e età. */
+
+
+// 1)- Creare un oggetto che descriva uno studente con le
+//seguenti proprietà: nome, cognome e età. Stampare a
+//schermo attraverso il for in tutte le proprietà.
+
+
+function firstEx(){
+    var student = {
+        'nome':'Giordano',
+        'cognome':'Vita',
+        'eta':26
+    }            
+
+
+        for(var i in student){
+            var info = student[i]
+            console.log(i,info )
+        }
+}
+
+// 2)- Creare un array di oggetti di studenti. Ciclare su tutti gli
+//studenti e stampare per ognuno nome e cognome
+
+function secondThirdEx(){
+
+    var students = [    
+                        {
+                            'nome':'Giordano',
+                            'cognome':'Vita',
+                            'eta':26
+                                                } ,
+                        {
+                            'nome':'Gianni',
+                            'cognome':'Bianchi',
+                            'eta':30
+                                                 } ,
+                        {
+                            'nome':'Ugo',
+                            'cognome':'Rossi',
+                            'eta':20
+                                                 } ,
+                        {
+                            'nome':'Franco',
+                            'cognome':'Verdi',
+                            'eta':25
+                                                 } ,                     
+                        {
+                            'nome':'Piero',
+                            'cognome':'Neri',
+                            'eta':35
+                                                }            
+                ]
+
+                for(var i = 0; i < students.length; i++){
+
+                    console.log(' ');
+                    console.log('nome: ' + students[i]['nome']);
+                    console.log('cognome: ' + students[i]['cognome']);
+                    }
+
+                    //fine ex 2 inizio ex 3
+/*                     - Dare la possibilità all'utente attraverso 3 prompt di
+                        aggiungere un nuovo oggetto studente inserendo
+                        nell'ordine: nome, cognome e età. */
+              
+               var clientData = {
+                    'nome': prompt('Inserisci qui il tuo nome'),
+                    'cognome': prompt('Inserisci qui il tuo cognome'),
+                    'eta': parseInt(prompt('Inserisci qui la tua età'))
+                    };
+                    students.push(clientData)
+                   //  console.log(students);
+ 
+               for(var i = 0; i < students.length; i++){
+
+                console.log(' ');
+                console.log('nome: ' + students[i]['nome']);
+                console.log('cognome: ' + students[i]['cognome']);
+                console.log('età: ' + students[i]['eta']);
+
+                }
+
+}
+
+function init(){
+   // firstEx()
+   secondThirdEx
+}
+
+init(); 
+
+
     </script>
 </body>
 
